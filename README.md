@@ -108,23 +108,18 @@ Para editar o eliminar, seleccione una fila. Con una lista vacía, esos botones 
 
 **Pendientes de generar en Windows.** El proyecto incluye [instrucciones y un capturador](docs/capturas/README.md) para guardar fotografías reales de cada formulario. Ejecute `docs/capturas/capturar.ps1` y siga sus mensajes. Una vez creados los PNG, puede añadirlos al README con las rutas `docs/capturas/01-productos.png`, `02-categorias.png`, `03-suplidores.png`, `04-papelera.png` y `05-informes.png`.
 
-![[Pasted image 20261018184519.png]]
+<img width="1360" height="841" alt="image" src="https://github.com/user-attachments/assets/69cac5cb-06d3-4d77-afa0-71e8e054d4a2" />
 
-![[{02AA3A3E-BB68-4EA4-A537-7C83E879A1F6}.png]]
+<img width="1352" height="825" alt="image" src="https://github.com/user-attachments/assets/652583cc-7eaf-464b-bf5a-a300a027fdd9" />
 
-![[{8170B9B0-A431-4445-BC86-B4604FCD0BE4}.png]]
+<img width="1355" height="826" alt="image" src="https://github.com/user-attachments/assets/c8335807-4e8f-497a-a7ba-9e428fa5505e" />
+
+<img width="1346" height="822" alt="image" src="https://github.com/user-attachments/assets/387bba79-a3dc-4b57-b828-a10cc81ad0ce" />
+
+<img width="1380" height="1210" alt="Diagrama_Clases" src="https://github.com/user-attachments/assets/125f4fc4-afa3-4664-969a-9c253f6a7cb8" />
 
 
-![[{8C32476E-9F5C-4C31-9797-A4D511D0A97E}.png]]
-
-
-![[{C0D45310-FF0D-4CDC-B292-E4202C773D1B}.png]]
-
-Diagramas incluidos (documentación, no capturas de la interfaz):
-
-![[Diagrama_Clases 1.svg]]
-
-![[Diagrama_ER.svg]]
+<img width="1380" height="1210" alt="Diagrama_Clases" src="https://github.com/user-attachments/assets/bbff31c5-574b-415e-9adb-5aa1df78cbce" />
 
 
 
