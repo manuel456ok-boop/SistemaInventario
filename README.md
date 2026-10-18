@@ -106,7 +106,6 @@ Para editar o eliminar, seleccione una fila. Con una lista vacía, esos botones 
 
 ## Capturas reales
 
-**Pendientes de generar en Windows.** El proyecto incluye [instrucciones y un capturador](docs/capturas/README.md) para guardar fotografías reales de cada formulario. Ejecute `docs/capturas/capturar.ps1` y siga sus mensajes. Una vez creados los PNG, puede añadirlos al README con las rutas `docs/capturas/01-productos.png`, `02-categorias.png`, `03-suplidores.png`, `04-papelera.png` y `05-informes.png`.
 
 <img width="1360" height="841" alt="image" src="https://github.com/user-attachments/assets/69cac5cb-06d3-4d77-afa0-71e8e054d4a2" />
 
