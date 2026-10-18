@@ -57,8 +57,6 @@ SistemaInventario/
     verificar.sql
     pruebas.sql
   docs/
-    Guia_Paso_a_Paso.md
-    Codigo_Explicado.html
     Matriz_Requisitos.md
     Diagrama_Clases.svg
     Diagrama_ER.svg
@@ -134,10 +132,6 @@ Diagramas incluidos (documentación, no capturas de la interfaz):
 
 ![Modelo ER](docs/Diagrama_ER.svg)
 
-## Entrega en GitHub
-
-No se ha publicado un repositorio remoto: no se indicó una URL de destino. El contenido está preparado para subirlo. Cree un repositorio vacío en su cuenta, sin README adicional, y ejecute **en esta carpeta**, reemplazando la URL:
-
 ```powershell
 git init
 git add .
@@ -146,8 +140,6 @@ git branch -M main
 git remote add origin https://github.com/TU-USUARIO/SistemaInventario.git
 git push -u origin main
 ```
-
-Se incluyen los archivos de `build/win-x64` porque la rúbrica pide el ejecutable compilado. No suba `bin`, `obj`, configuraciones con contraseñas ni archivos temporales. Si el curso exige la carpeta `/SistemaInventario` dentro de otro repositorio, coloque esta carpeta completa dentro de ese repositorio antes de `git add`.
 
 ## Referencias técnicas oficiales
 
