@@ -1,0 +1,83 @@
+OK Categoría rechaza longitud 0
+OK Categoría rechaza longitud 2
+OK Categoría rechaza longitud 2
+OK Categoría rechaza longitud 101
+OK Categoría acepta longitud 3
+OK Categoría acepta longitud 100
+OK Descripción rechaza longitud 0
+OK Descripción rechaza longitud 3
+OK Descripción rechaza longitud 501
+OK Descripción acepta 500
+OK Nombre se recorta
+OK Categoría duplicada ignora mayúsculas
+OK Categoría duplicada incluye papelera
+OK Teléfono válido 809-123-4567
+OK Teléfono válido 829-123-4567
+OK Teléfono válido 849-123-4567
+OK Teléfono inválido 8091234567
+OK Teléfono inválido 800-123-4567
+OK Teléfono inválido 809-12-4567
+OK Teléfono inválido 809-123-45678
+OK Teléfono inválido 
+OK Correo válido ana@empresa.com
+OK Correo válido ana+ventas@sub.empresa.do
+OK Correo inválido 4
+OK Correo inválido 12
+OK Correo inválido 15
+OK Correo inválido 11
+OK Correo inválido 255
+OK Web válida https://empresa.com
+OK Web válida http://empresa.com/ruta
+OK Web inválida empresa.com
+OK Web inválida ftp://empresa.com
+OK Web inválida javascript:alert(1)
+OK Web inválida https://
+OK Web opcional
+OK Suplidor único
+OK Contacto obligatorio
+OK Errores de contacto llegan por campo
+OK Precio inválido 0
+OK Precio inválido -1
+OK Precio inválido 12.345
+OK Precio inválido 10000000000000000
+OK Precio válido 0.01
+OK Precio válido 12.30
+OK Precio válido 9999999999999999.99
+OK Entrada no redondea
+OK Entrada rechaza texto
+OK Entrada rechaza miles
+OK Producto exige nombre
+OK Producto exige categoría existente
+OK Producto exige suplidor existente
+OK Producto exige categoría activa
+OK Producto exige suplidor activo
+OK Borrado categoría protegido
+OK Borrado suplidor protegido
+OK Eliminado no aparece activo
+OK No edita eliminado
+OK Restauración exige categoría
+OK Restauración exige suplidor
+OK Ciclo completo de restauración
+OK Registro inexistente
+OK PNG firma válida
+OK JPEG firma válida
+OK Foto rechaza extensión
+OK Foto rechaza archivo vacío
+OK Foto rechaza firma falsa
+OK Foto rechaza más de 2 MB
+OK Límite de fotos 0
+OK Límite de fotos 5
+OK Límite de fotos 6
+OK Búsqueda genérica ignora mayúsculas
+OK Joins conservan nombres
+OK Filtro combinado e inclusivo
+OK Filtro fuera de rango vacío
+OK Rango invertido rechaza
+OK Promedio y conteo por categoría
+OK Categoría vacía conservada
+OK Ranking de suplidores
+OK Sobre promedio global
+OK Informe vacío no divide por cero
+OK Ranking excluye eliminados
+OK Ranking limita a cinco
+RESULTADO: 82 aprobadas, 0 fallidas.

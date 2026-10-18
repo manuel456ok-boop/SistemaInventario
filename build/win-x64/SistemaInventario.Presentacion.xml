@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SistemaInventario.Presentacion</name>
+    </assembly>
+    <members>
+        <member name="T:SistemaInventario.Presentacion.CategoriaForm">
+            <summary>Edita una copia; cancelar nunca altera el objeto del listado.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.CategoriaForm.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion,SistemaInventario.Entidades.Categoria)">
+            <summary>Inicializa campos y previsualizador de fotos.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.CategoriaForm.Dispose(System.Boolean)">
+            <summary>Libera la imagen GDI creada para la vista previa.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.CategoriasControl">
+            <summary>Catálogo de categorías con búsqueda por nombre y descripción.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.CategoriasControl.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion)">
+            <summary>Inyecta los servicios.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.EditorForm">
+            <summary>Editor común que conecta errores por propiedad con ErrorProvider.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.EditorForm.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion,System.String)">
+            <summary>Prepara campos, comandos y ciclo de guardado asíncrono.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.EditorForm.Dispose(System.Boolean)">
+            <summary>Libera el componente de validación y los controles.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.InformesControl">
+            <summary>Expone los resultados de las consultas LINQ en tablas separadas.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.InformesControl.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion)">
+            <summary>Crea informe de categorías, ranking y productos sobre el promedio.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.ListadoControl`1">
+            <summary>Reutiliza carga asíncrona, búsqueda, selección y comandos del CRUD.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.ListadoControl`1.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion)">
+            <summary>Arma el listado; las subclases aportan datos y formularios.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.OpcionFiltro">
+            <summary>Opción de catálogo; Id cero representa todos o ninguna selección.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.OpcionFiltro.#ctor(System.Int32,System.String)">
+            <summary>Opción de catálogo; Id cero representa todos o ninguna selección.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.PapeleraControl">
+            <summary>Permite buscar y restaurar categorías, suplidores y productos.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.PapeleraControl.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion)">
+            <summary>Recibe servicios y arma búsqueda, selección y restauración.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.PrincipalForm">
+            <summary>Contenedor principal con navegación a los cinco módulos.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.PrincipalForm.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion)">
+            <summary>Recibe todos los servicios sin referenciar AccesoDatos.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.ProductoForm">
+            <summary>Editor con combos restringidos a asociaciones activas.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.ProductoForm.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion,SistemaInventario.Entidades.Producto,System.Collections.Generic.IReadOnlyList{SistemaInventario.Entidades.Categoria},System.Collections.Generic.IReadOnlyList{SistemaInventario.Entidades.Suplidor})">
+            <summary>Recibe catálogos activos precargados.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.ProductosControl">
+            <summary>Filtra una instantánea local sin consultar SQL por cada tecla.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.ProductosControl.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion)">
+            <summary>Crea filtros combinables; precio vacío significa sin límite.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.RegistroPapelera">
+            <summary>Fila común para los tres tipos de registros eliminados.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.RegistroPapelera.#ctor(System.Int32,System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>Fila común para los tres tipos de registros eliminados.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.SuplidoresControl">
+            <summary>Catálogo de empresas con búsqueda en todos los datos de contacto.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.SuplidoresControl.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion)">
+            <summary>Inyecta servicios.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.SuplidorForm">
+            <summary>Editor de empresa y datos de contacto.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.SuplidorForm.#ctor(SistemaInventario.LogicaNegocio.ServiciosAplicacion,SistemaInventario.Entidades.Suplidor)">
+            <summary>Muestra una copia de los valores originales.</summary>
+        </member>
+        <member name="T:SistemaInventario.Presentacion.Tema">
+            <summary>Componentes visuales uniformes, creados por código para facilitar su lectura.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.Tema.Boton(System.String,System.Boolean)">
+            <summary>Crea un botón con tamaño y contraste consistentes.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.Tema.Tabla">
+            <summary>Configura una tabla de solo lectura con selección por fila.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.Tema.Formatear(System.Windows.Forms.DataGridView)">
+            <summary>Formatea moneda y auditoría, ocultando claves técnicas.</summary>
+        </member>
+        <member name="M:SistemaInventario.Presentacion.Tema.MostrarError(System.Exception,SistemaInventario.Entidades.ILogger)">
+            <summary>Muestra una causa comprensible y registra las excepciones inesperadas.</summary>
+        </member>
+        <member name="T:ApplicationConfiguration">
+            <summary>
+             Bootstrap the application configuration.
+            </summary>
+        </member>
+        <member name="M:ApplicationConfiguration.Initialize">
+            <summary>
+             Bootstrap the application as follows:
+             <code>
+             global::System.Windows.Forms.Application.EnableVisualStyles();
+             global::System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+             global::System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            </code>
+            </summary>
+        </member>
+    </members>
+</doc>

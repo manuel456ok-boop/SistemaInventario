@@ -1,0 +1,4 @@
+schema.sql: 0 errores de sintaxis T-SQL
+datos.sql: 0 errores de sintaxis T-SQL
+verificar.sql: 0 errores de sintaxis T-SQL
+pruebas.sql: 0 errores de sintaxis T-SQL

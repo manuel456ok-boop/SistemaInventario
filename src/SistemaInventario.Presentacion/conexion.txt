@@ -1,0 +1,1 @@
+Server=(localdb)\clases;Database=SistemaInventario;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;Connect Timeout=10;

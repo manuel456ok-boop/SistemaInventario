@@ -1,0 +1,7 @@
+Publicación Release para Windows x64.
+Ejecutar: win-x64/SistemaInventario.Presentacion.exe
+Requiere .NET 8 Desktop Runtime x64.
+Mantenga todos los archivos de win-x64 juntos.
+Configure win-x64/conexion.txt y ejecute primero los scripts SQL por separado.
+La solución fuente y las instrucciones están en ../src y ../README.md.
+SHA256SUMS.txt permite verificar la integridad de esta publicación.

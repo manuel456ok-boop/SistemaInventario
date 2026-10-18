@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SistemaInventario.AccesoDatos</name>
+    </assembly>
+    <members>
+        <member name="T:SistemaInventario.AccesoDatos.CategoriaRepositorio">
+            <summary>Persiste categorías y fotografías en una sola transacción de escritura.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.CategoriaRepositorio.#ctor(SistemaInventario.AccesoDatos.EjecutorSql)">
+            <summary>Inyecta el ejecutor compartido.</summary>
+        </member>
+        <member name="T:SistemaInventario.AccesoDatos.ConexionSql">
+            <summary>Singleton de configuración; crea una conexión corta por operación.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.ConexionSql.Configurar(System.String)">
+            <summary>Configura una vez al iniciar; valida la sintaxis sin abrir la conexión.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.ConexionSql.CrearConexion">
+            <summary>Crea una conexión nueva; el pool reutiliza conexiones físicas.</summary>
+        </member>
+        <member name="T:SistemaInventario.AccesoDatos.EjecutorSql">
+            <summary>Centraliza apertura, transacción y manejo específico de SqlException.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.EjecutorSql.#ctor(SistemaInventario.AccesoDatos.ConexionSql,SistemaInventario.Entidades.ILogger)">
+            <summary>Recibe dependencias por constructor.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.EjecutorSql.Ejecutar``1(System.String,System.Boolean,System.Func{Microsoft.Data.SqlClient.SqlConnection,Microsoft.Data.SqlClient.SqlTransaction,``0})">
+            <summary>Ejecuta lecturas o escrituras; toda interacción SQL queda dentro del try.</summary>
+        </member>
+        <member name="T:SistemaInventario.AccesoDatos.Logger">
+            <summary>Escribe errores en una carpeta con permiso del usuario.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.Logger.Error(System.String,System.Exception)">
+            <summary>Serializa escrituras; un fallo del log nunca reemplaza el error original.</summary>
+        </member>
+        <member name="T:SistemaInventario.AccesoDatos.ProductoRepositorio">
+            <summary>Persiste precios y claves foráneas usando parámetros tipados.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.ProductoRepositorio.#ctor(SistemaInventario.AccesoDatos.EjecutorSql)">
+            <summary>Inyecta el ejecutor.</summary>
+        </member>
+        <member name="T:SistemaInventario.AccesoDatos.RepositorioSql`1">
+            <summary>Implementa el ciclo CRUD común y delega el mapeo a repositorios concretos.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.RepositorioSql`1.#ctor(SistemaInventario.AccesoDatos.EjecutorSql,System.String)">
+            <summary>Recibe ejecutor y tabla fija.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.RepositorioSql`1.Listar(System.Boolean)">
+            <summary>Lee una lista filtrada por Activo.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.RepositorioSql`1.Obtener(System.Int32)">
+            <summary>Obtiene un registro de cualquier estado.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.RepositorioSql`1.Crear(`0)">
+            <summary>Inserta entidad y relaciones atómicamente.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.RepositorioSql`1.Actualizar(`0)">
+            <summary>Actualiza campos y relaciones de un registro activo.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.RepositorioSql`1.Eliminar(System.Int32)">
+            <summary>Aplica borrado lógico; los triggers protegen relaciones activas.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.RepositorioSql`1.Restaurar(System.Int32)">
+            <summary>Restaura; los triggers validan nuevamente las relaciones.</summary>
+        </member>
+        <member name="T:SistemaInventario.AccesoDatos.SuplidorRepositorio">
+            <summary>Mapea la información de contacto del suplidor.</summary>
+        </member>
+        <member name="M:SistemaInventario.AccesoDatos.SuplidorRepositorio.#ctor(SistemaInventario.AccesoDatos.EjecutorSql)">
+            <summary>Inyecta el ejecutor.</summary>
+        </member>
+    </members>
+</doc>

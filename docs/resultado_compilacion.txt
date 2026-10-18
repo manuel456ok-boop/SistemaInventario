@@ -1,0 +1,17 @@
+Determining projects to restore...
+  Restored SistemaInventario/src/SistemaInventario.Entidades/SistemaInventario.Entidades.csproj (in 99 ms).
+  Restored SistemaInventario/tests/SistemaInventario.Pruebas/SistemaInventario.Pruebas.csproj (in 234 ms).
+  Restored SistemaInventario/src/SistemaInventario.Presentacion/SistemaInventario.Presentacion.csproj (in 234 ms).
+  Restored SistemaInventario/src/SistemaInventario.AccesoDatos/SistemaInventario.AccesoDatos.csproj (in 235 ms).
+  Restored SistemaInventario/src/SistemaInventario.LogicaNegocio/SistemaInventario.LogicaNegocio.csproj (in 234 ms).
+  SistemaInventario.Entidades -> SistemaInventario/src/SistemaInventario.Entidades/bin/Release/net8.0/SistemaInventario.Entidades.dll
+  SistemaInventario.AccesoDatos -> SistemaInventario/src/SistemaInventario.AccesoDatos/bin/Release/net8.0/SistemaInventario.AccesoDatos.dll
+  SistemaInventario.LogicaNegocio -> SistemaInventario/src/SistemaInventario.LogicaNegocio/bin/Release/net8.0/SistemaInventario.LogicaNegocio.dll
+  SistemaInventario.Presentacion -> SistemaInventario/src/SistemaInventario.Presentacion/bin/Release/net8.0-windows/SistemaInventario.Presentacion.dll
+  SistemaInventario.Pruebas -> SistemaInventario/tests/SistemaInventario.Pruebas/bin/Release/net8.0/SistemaInventario.Pruebas.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:05.26

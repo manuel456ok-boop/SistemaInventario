@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SistemaInventario.LogicaNegocio</name>
+    </assembly>
+    <members>
+        <member name="T:SistemaInventario.LogicaNegocio.Buscador">
+            <summary>Utilidad genérica propia adicional al repositorio.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.Buscador.Filtrar``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.String})">
+            <summary>Filtra cualquier tipo por su texto, sin distinguir mayúsculas.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.CategoriaServicio">
+            <summary>Reglas del catálogo y protección de productos activos.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.CategoriaServicio.#ctor(SistemaInventario.Entidades.IRepositorio{SistemaInventario.Entidades.Categoria},SistemaInventario.Entidades.IRepositorio{SistemaInventario.Entidades.Producto})">
+            <summary>Recibe ambos repositorios por constructor.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.Composicion">
+            <summary>Único lugar que conoce las implementaciones concretas de datos.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.Composicion.Crear(System.String)">
+            <summary>Construye el grafo y devuelve solo servicios a la presentación.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.ConsultasInventario">
+            <summary>Consultas LINQ en memoria sobre una instantánea de los catálogos.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ConsultasInventario.Proyectar(System.Collections.Generic.IEnumerable{SistemaInventario.Entidades.Producto},System.Collections.Generic.IEnumerable{SistemaInventario.Entidades.Categoria},System.Collections.Generic.IEnumerable{SistemaInventario.Entidades.Suplidor})">
+            <summary>LINQ 1: dos joins y proyección de productos a filas legibles.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ConsultasInventario.Filtrar(System.Collections.Generic.IEnumerable{SistemaInventario.LogicaNegocio.ProductoVista},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>LINQ 2: búsqueda textual, categoría, suplidor y rango inclusivo.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ConsultasInventario.PorCategoria(System.Collections.Generic.IEnumerable{SistemaInventario.Entidades.Producto},System.Collections.Generic.IEnumerable{SistemaInventario.Entidades.Categoria})">
+            <summary>LINQ 3: group join, conteo y promedio; conserva categorías sin productos.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ConsultasInventario.TopSuplidores(System.Collections.Generic.IEnumerable{SistemaInventario.Entidades.Producto},System.Collections.Generic.IEnumerable{SistemaInventario.Entidades.Suplidor})">
+            <summary>LINQ 4: agrupa, une, ordena y toma los cinco suplidores con más productos.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ConsultasInventario.SobrePromedio(System.Collections.Generic.IEnumerable{SistemaInventario.LogicaNegocio.ProductoVista})">
+            <summary>LINQ 5: productos sobre el promedio global, ordenados por precio.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.IServicio`1">
+            <summary>Operaciones autorizadas para los formularios.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.IServicio`1.Listar(System.Boolean)">
+            <summary>Obtiene registros activos o eliminados.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.IServicio`1.Guardar(`0)">
+            <summary>Valida e inserta o actualiza según la identidad.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.IServicio`1.Eliminar(System.Int32)">
+            <summary>Valida relaciones antes de desactivar.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.IServicio`1.Restaurar(System.Int32)">
+            <summary>Valida la recuperación del registro.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.PrecioEntrada">
+            <summary>Interpreta el precio sin redondear silenciosamente los decimales del usuario.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.PrecioEntrada.Leer(System.String,System.Globalization.CultureInfo)">
+            <summary>Acepta el separador decimal de la cultura; rechaza miles y texto inválido.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.ProductoServicio">
+            <summary>Exige precio válido y relaciones activas al guardar y restaurar.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ProductoServicio.#ctor(SistemaInventario.Entidades.IRepositorio{SistemaInventario.Entidades.Producto},SistemaInventario.Entidades.IRepositorio{SistemaInventario.Entidades.Categoria},SistemaInventario.Entidades.IRepositorio{SistemaInventario.Entidades.Suplidor})">
+            <summary>Recibe los contratos requeridos para validar relaciones.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.ProductoVista">
+            <summary>Proyección para listados, sin consultas SQL desde la presentación.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ProductoVista.#ctor(System.Int32,System.String,System.Decimal,System.Int32,System.String,System.Int32,System.String,System.DateTime,System.DateTime)">
+            <summary>Proyección para listados, sin consultas SQL desde la presentación.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.ResumenCategoria">
+            <summary>Conteo y promedio de una categoría, incluyendo las vacías.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ResumenCategoria.#ctor(System.String,System.Int32,System.Decimal)">
+            <summary>Conteo y promedio de una categoría, incluyendo las vacías.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.ResumenSuplidor">
+            <summary>Fila del ranking de proveedores.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ResumenSuplidor.#ctor(System.String,System.Int32)">
+            <summary>Fila del ranking de proveedores.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.ServicioBase`1">
+            <summary>Plantilla del CRUD: validar siempre antes de persistir.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ServicioBase`1.#ctor(SistemaInventario.Entidades.IRepositorio{`0})">
+            <summary>Inyecta un contrato, sin crear un repositorio concreto.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ServicioBase`1.Listar(System.Boolean)">
+            <summary>Lista únicamente el estado solicitado.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ServicioBase`1.Guardar(`0)">
+            <summary>Impide editar eliminados y aplica todas las validaciones.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ServicioBase`1.Eliminar(System.Int32)">
+            <summary>Rechaza borrados repetidos y verifica dependencias activas.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ServicioBase`1.Restaurar(System.Int32)">
+            <summary>Restaura solamente si las reglas actuales lo permiten.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.ServiciosAplicacion">
+            <summary>Dependencias que recibe la ventana principal.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ServiciosAplicacion.#ctor(SistemaInventario.LogicaNegocio.IServicio{SistemaInventario.Entidades.Categoria},SistemaInventario.LogicaNegocio.IServicio{SistemaInventario.Entidades.Suplidor},SistemaInventario.LogicaNegocio.IServicio{SistemaInventario.Entidades.Producto},SistemaInventario.Entidades.ILogger)">
+            <summary>Permite montar SQL o repositorios de prueba sin alterar formularios.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.SuplidorServicio">
+            <summary>Valida los datos de contacto y la unicidad de empresa.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.SuplidorServicio.#ctor(SistemaInventario.Entidades.IRepositorio{SistemaInventario.Entidades.Suplidor},SistemaInventario.Entidades.IRepositorio{SistemaInventario.Entidades.Producto})">
+            <summary>Recibe repositorios por constructor.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.ValidacionException">
+            <summary>Transporta errores por propiedad para ErrorProvider.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.ValidacionException.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">
+            <summary>Construye un único mensaje y conserva el detalle por campo.</summary>
+        </member>
+        <member name="T:SistemaInventario.LogicaNegocio.Validador">
+            <summary>Reglas reutilizadas por los servicios; la UI solo presenta errores.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.Validador.Texto(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.Int32,System.Int32)">
+            <summary>Valida texto obligatorio, después de quitar espacios extremos.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.Validador.Correo(System.String)">
+            <summary>Valida correo mediante regex con tiempo máximo.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.Validador.Telefono(System.String)">
+            <summary>Exige un teléfono dominicano con guiones.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.Validador.Web(System.String)">
+            <summary>Acepta exclusivamente URL absolutas HTTP o HTTPS.</summary>
+        </member>
+        <member name="M:SistemaInventario.LogicaNegocio.Validador.Foto(SistemaInventario.Entidades.FotoCategoria)">
+            <summary>Comprueba extensión, tamaño y firma para no aceptar texto renombrado.</summary>
+        </member>
+    </members>
+</doc>

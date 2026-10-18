@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SistemaInventario.Entidades</name>
+    </assembly>
+    <members>
+        <member name="T:SistemaInventario.Entidades.Categoria">
+            <summary>Clasifica productos y conserva hasta cinco imágenes.</summary>
+        </member>
+        <member name="T:SistemaInventario.Entidades.EntidadBase">
+            <summary>Estado y auditoría comunes a los registros del inventario.</summary>
+        </member>
+        <member name="T:SistemaInventario.Entidades.FotoCategoria">
+            <summary>Imagen almacenada en SQL Server; no depende de rutas del equipo.</summary>
+        </member>
+        <member name="T:SistemaInventario.Entidades.ILogger">
+            <summary>Destino intercambiable de errores.</summary>
+        </member>
+        <member name="M:SistemaInventario.Entidades.ILogger.Error(System.String,System.Exception)">
+            <summary>Registra detalles técnicos sin incluir la cadena de conexión.</summary>
+        </member>
+        <member name="T:SistemaInventario.Entidades.IRepositorio`1">
+            <summary>Contrato genérico: el negocio solicita operaciones sin conocer SQL.</summary>
+        </member>
+        <member name="M:SistemaInventario.Entidades.IRepositorio`1.Listar(System.Boolean)">
+            <summary>Lista activos o eliminados según el argumento.</summary>
+        </member>
+        <member name="M:SistemaInventario.Entidades.IRepositorio`1.Obtener(System.Int32)">
+            <summary>Busca por identidad, incluyendo eliminados.</summary>
+        </member>
+        <member name="M:SistemaInventario.Entidades.IRepositorio`1.Crear(`0)">
+            <summary>Inserta y devuelve la identidad asignada.</summary>
+        </member>
+        <member name="M:SistemaInventario.Entidades.IRepositorio`1.Actualizar(`0)">
+            <summary>Actualiza un registro activo.</summary>
+        </member>
+        <member name="M:SistemaInventario.Entidades.IRepositorio`1.Eliminar(System.Int32)">
+            <summary>Cambia Activo a falso, sin borrar físicamente.</summary>
+        </member>
+        <member name="M:SistemaInventario.Entidades.IRepositorio`1.Restaurar(System.Int32)">
+            <summary>Recupera un registro eliminado.</summary>
+        </member>
+        <member name="T:SistemaInventario.Entidades.PersistenciaException">
+            <summary>Expone un mensaje seguro al negocio sin filtrar tipos de SqlClient.</summary>
+        </member>
+        <member name="M:SistemaInventario.Entidades.PersistenciaException.#ctor(System.String,System.Exception)">
+            <summary>Conserva la causa técnica para diagnóstico.</summary>
+        </member>
+        <member name="T:SistemaInventario.Entidades.Producto">
+            <summary>Producto con precio y referencias obligatorias a sus catálogos.</summary>
+        </member>
+        <member name="T:SistemaInventario.Entidades.Suplidor">
+            <summary>Empresa que suministra productos.</summary>
+        </member>
+    </members>
+</doc>

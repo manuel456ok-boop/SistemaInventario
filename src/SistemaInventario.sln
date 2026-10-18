@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaInventario.AccesoDatos", "SistemaInventario.AccesoDatos\SistemaInventario.AccesoDatos.csproj", "{F1257E7D-1A1B-43A0-9E1B-A18B3FF46926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaInventario.Entidades", "SistemaInventario.Entidades\SistemaInventario.Entidades.csproj", "{28ADB169-678A-402D-BC97-B16EACF19F4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaInventario.LogicaNegocio", "SistemaInventario.LogicaNegocio\SistemaInventario.LogicaNegocio.csproj", "{DC789066-3DD6-4DD6-B3CD-FBE0B545D052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaInventario.Presentacion", "SistemaInventario.Presentacion\SistemaInventario.Presentacion.csproj", "{8132E2D1-6704-4EA3-8026-D3986317BCF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaInventario.Pruebas", "..\tests\SistemaInventario.Pruebas\SistemaInventario.Pruebas.csproj", "{3D9380F8-594B-45CC-B721-C5FED118F4A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1257E7D-1A1B-43A0-9E1B-A18B3FF46926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1257E7D-1A1B-43A0-9E1B-A18B3FF46926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1257E7D-1A1B-43A0-9E1B-A18B3FF46926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1257E7D-1A1B-43A0-9E1B-A18B3FF46926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28ADB169-678A-402D-BC97-B16EACF19F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28ADB169-678A-402D-BC97-B16EACF19F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28ADB169-678A-402D-BC97-B16EACF19F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28ADB169-678A-402D-BC97-B16EACF19F4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC789066-3DD6-4DD6-B3CD-FBE0B545D052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC789066-3DD6-4DD6-B3CD-FBE0B545D052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC789066-3DD6-4DD6-B3CD-FBE0B545D052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC789066-3DD6-4DD6-B3CD-FBE0B545D052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8132E2D1-6704-4EA3-8026-D3986317BCF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8132E2D1-6704-4EA3-8026-D3986317BCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8132E2D1-6704-4EA3-8026-D3986317BCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8132E2D1-6704-4EA3-8026-D3986317BCF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D9380F8-594B-45CC-B721-C5FED118F4A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9380F8-594B-45CC-B721-C5FED118F4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9380F8-594B-45CC-B721-C5FED118F4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9380F8-594B-45CC-B721-C5FED118F4A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
